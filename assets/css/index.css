@@ -9,6 +9,78 @@ body {
     background-color: #E7E8EC;
 }
 
+.normal {
+    background-color: #a6a877;
+}
+
+.grass {
+    background-color: #77c850;
+}
+
+.fire {
+    background-color: #ee7f30;
+}
+
+.water {
+    background-color: #678fee;
+}
+
+.electric {
+    background-color: #f7cf2e;
+}
+
+.ice {
+    background-color: #98d5d7;
+}
+
+.ground {
+    background-color: #dfbf69;
+}
+
+.flying {
+    background-color: #a98ff0;
+}
+
+.poison {
+    background-color: #a040a0;
+}
+
+.fighting {
+    background-color: #bf3029;
+}
+
+.psychic {
+    background-color: #f65687;
+}
+
+.dark {
+    background-color: #725847;
+}
+
+.rock {
+    background-color: #b8a137;
+}
+
+.bug {
+    background-color: #a8b720;
+}
+
+.ghost {
+    background-color: #6e5896;
+}
+
+.steel {
+    background-color: #b9b7cf;
+}
+
+.dragon {
+    background-color: #6f38f6;
+}
+
+.fairy {
+    background-color: #f9aec7;
+}
+
 .title {
     padding: 2rem 0 0 2rem;
 }
@@ -28,11 +100,17 @@ body {
     list-style: none;
     display: flex;
     flex-direction: column;
-    background-color: #49D0B0;
     width: 275px;
-    height: 200px;
+    height: auto;
     padding: 1rem;
     border-radius: 15px;
+    cursor: pointer;
+
+    transition: all ease .3s;
+}
+
+.pokemons-ul li:hover {
+    transform: translateY(-5px);
 }
 
 .pokemon-nome {
@@ -44,23 +122,25 @@ body {
 .pokemon-details {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding-top: .5rem;
 }
 
 .pokemon-details div p {
-    background-color: #E7E8EC;
+    filter: brightness(1.1);
     padding: .3rem 1rem;
     border-radius: 15px;
     margin-bottom: .5rem;
     text-align: center;
 }
 
-.pokemon-details div {
+.poke-img {
     text-align: end;
 }
 
-.pokemon-details div img {
-    width: 75%;
+
+.poke-img img {
+    width: 80%;
 }
 
 
@@ -69,7 +149,6 @@ body {
 @media screen and (min-width: 425px) {
     .pokemons-ul li {
         width: 185px;
-        height: 140px;
     }
 
     .pokemon-details {
@@ -84,7 +163,6 @@ body {
     .pokemon-details div img {
         width: 75px;
     }
-
 }
 
 /* Tablet */
@@ -95,8 +173,6 @@ body {
     }
 
     .section-pokemons {
-
-
         background-color: #fff;
         margin: 2rem;
         border-radius: 15px;
