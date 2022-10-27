@@ -3,7 +3,7 @@ const verPokemon = document.getElementById("btn-verPokemon");
 const showModal = document.getElementById("showModal");
 
 let offset = 0;
-const limit = 1;
+const limit = 20;
 
 const showTypes = (pokemonTypes) => {
   return pokemonTypes.map(
@@ -58,6 +58,7 @@ const opemModal = (id) => {
   fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     .then((res) => res.json())
     .then((data) => {
+      console.log(data)
       return (showModal.innerHTML = `
       <div class="modal">
       <div class="header">
@@ -89,12 +90,12 @@ const opemModal = (id) => {
 
         <div class="type">
           <h4>Altura:</h4>
-          <p>00000</p>
+          <p>${data.height}</p>
         </div>
 
         <div class="type">
           <h4>Peso:</h4>
-          <p>11111</p>
+          <p>${data.weight}</p>
         </div>
       </div>
     </div>
