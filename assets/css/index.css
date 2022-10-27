@@ -290,7 +290,7 @@ body {
     .modal {
         width: 350px;
         height: 32rem;
-        position: absolute;
+        position: fixed;
         top: 10%;
         left: 50%;
         transform: translateX(-50%);
