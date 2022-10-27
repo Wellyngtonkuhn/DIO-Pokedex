@@ -5,6 +5,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+button {
+    border: unset;
+}
+
 body {
     background-color: #E7E8EC;
 }
@@ -87,6 +91,9 @@ body {
 
 .section-pokemons {
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .pokemons-ul {
@@ -100,7 +107,7 @@ body {
     list-style: none;
     display: flex;
     flex-direction: column;
-    width: 275px;
+    width: auto;
     height: auto;
     padding: 1rem;
     border-radius: 15px;
@@ -143,6 +150,108 @@ body {
     width: 80%;
 }
 
+#btn-vermais {
+    margin-top: 1rem;
+    padding: .7rem 3rem;
+    font-size: 1rem;
+    background: #77c850;
+    color: #fff;
+    border: unset;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all ease .5s;
+}
+
+#btn-vermais:hover {
+    transform: translateY(-5px);
+}
+
+/* Modal */
+
+.modal {
+    background-color: #77c850;
+    width: 100vw;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.fecharModal {
+    text-align: center;
+    font-size: 2rem;
+    background-color: #fff;
+    color: #000;
+    border-radius: 25%;
+    cursor: pointer;
+}
+
+.modal .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.modal .header h3 {
+    font-size: 2.5rem;
+}
+
+.modal .type {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-top: .2rem;
+}
+
+.modal .type p {
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #678fee;
+    filter: brightness(1.1);
+    padding: .3rem 1rem;
+    border-radius: 15px;
+    border: unset;
+}
+
+.modal-img {
+    width: 100px;
+    margin: auto;
+}
+
+.modal-img img {
+    width: 300px;
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.modal-details {
+    width: 100vw;
+    height: 50vh;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.modal-details .type {
+    margin-top: 2rem;
+}
+
+.modal-details h4 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
 
 
 /* Large Phone */
@@ -177,4 +286,67 @@ body {
         margin: 2rem;
         border-radius: 15px;
     }
+
+    .modal {
+        width: 350px;
+        height: 32rem;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 15px;
+    }
+
+    .modal-img img {
+        width: 100px;
+        top: 24%;
+    }
+
+    .modal-details {
+        width: 350px;
+        height: unset;
+    }
+
+    .modal-details h4 {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .modal-details .type p {
+        font-size: .8rem;
+    }
 }
+
+/* Desktop 
+@media screen and (min-width: 1024px) {
+    .modal {
+        width: 350px;
+        height: 32rem;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 15px;
+    }
+
+    .modal-img img {
+        width: 100px;
+        top: 24%;
+    }
+
+    .modal-details {
+        width: 350px;
+        height: unset;
+    }
+
+    .modal-details h4 {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .modal-details .type p {
+        font-size: .8rem;
+    }
+}
+
+*/
