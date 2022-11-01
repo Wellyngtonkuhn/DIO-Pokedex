@@ -108,8 +108,9 @@ body {
     list-style: none;
     display: flex;
     flex-direction: column;
-    width: auto;
-    height: auto;
+    justify-content: space-around;
+    width: 80vw;
+    height: 200px;
     padding: 1rem;
     border-radius: 15px;
     cursor: pointer;
@@ -124,14 +125,12 @@ body {
 .pokemon-nome {
     text-transform: capitalize;
     color: #fff;
-    padding-bottom: .5rem;
 }
 
 .pokemon-details {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-top: .5rem;
+    justify-content: space-around;
 }
 
 .pokemon-details div p {
@@ -148,7 +147,8 @@ body {
 
 
 .poke-img img {
-    width: 80%;
+    width: 100px;
+    height: 150px;
 }
 
 #btn-vermais {
